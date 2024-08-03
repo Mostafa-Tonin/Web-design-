@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            margin-bottom: 10px;
+        }
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            display: inline-block;
+            position: relative;
+        }
+        .highlight::after {
+            content: 'Cascading Style Sheets';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 2px 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            display: none;
+        }
+        .highlight:hover::after {
+            display: block;
+        }
+        .iframe-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .iframe-container div {
+            width: 48%;
+            border: 13px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">About us page</a>
+        <a href="#">Contact us page</a>
+    </nav>
+    <div class="content">
+        <p>
+            this is <em>emphasis of its contents</em>. the price is <s>200</s> not 300 dolor<br>
+            “this is quote from another book”<br>
+            for design the web site we use <span class="highlight">CSS</span>
+        </p>
+        <div class="iframe-container">
+            <div>
+                <h2>about us page show inside home page by iframe</h2>
+                <p>This is page show about us content</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
